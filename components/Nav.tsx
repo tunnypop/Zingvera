@@ -40,7 +40,7 @@ export default function Nav() {
     >
       <Link href="/" style={{
         fontFamily: "var(--font-serif)",
-        fontSize: 22, fontWeight: 600,
+        fontSize: 32, fontWeight: 600,
         color: dark ? "#fff" : "#0D2B20",
         textDecoration: "none",
         letterSpacing: "0.5px",
