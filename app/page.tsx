@@ -9,46 +9,58 @@ const S = {
 export default function Home() {
   return (
     <>
-   {/* HERO */}
-<section style={{ background: "#0D2B20", display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center", height: "100vh", overflow: "hidden", position: "relative" }}>
+  {/* HERO */}
+<section style={{ background: "#0D2B20", position: "relative", overflow: "hidden" }}>
   <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 80% at 0% 100%, rgba(45,106,79,0.4) 0%, transparent 60%)" }} />
 
-  {/* LEFT — text */}
-  <div style={{ position: "relative", zIndex: 1, padding: "3rem clamp(1.5rem,4vw,3.5rem)" }}>
-    <p style={{ fontSize: 11, fontWeight: 500, letterSpacing: "2.5px", textTransform: "uppercase", color: "#C8A882", marginBottom: "1.25rem" }}>West Africa · Botanical exports</p>
-    <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(32px,4.5vw,60px)", fontWeight: 500, lineHeight: 1.05, color: "#fff", marginBottom: "1.25rem", letterSpacing: "-0.5px" }}>
-      The best hibiscus<br />and ginger grow<br /><em style={{ color: "#C8A882" }}>here.</em>
-    </h1>
-    <p style={{ fontSize: 14, color: "rgba(255,255,255,0.6)", maxWidth: 380, lineHeight: 1.75, marginBottom: "2rem", fontWeight: 300 }}>
-      Zingvera supplies export-grade dried hibiscus flowers and split ginger — sourced directly from Nigeria's northern cooperatives and delivered to manufacturers across Europe and the Americas.
-    </p>
-    <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-      <Link href="/#contact" style={{ fontFamily: "var(--font-sans)", fontSize: 13, fontWeight: 500, background: "#C8A882", color: "#0D2B20", padding: "11px 24px", borderRadius: 4, textDecoration: "none" }}>Request a sample</Link>
-      <Link href="/hibiscus" style={{ fontFamily: "var(--font-sans)", fontSize: 13, fontWeight: 400, background: "transparent", color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.25)", padding: "11px 24px", borderRadius: 4, textDecoration: "none" }}>View products</Link>
-    </div>
-  </div>
+  <div style={{
+    position: "relative", zIndex: 1,
+    maxWidth: 1160, margin: "0 auto",
+    padding: "8rem clamp(1.5rem,5vw,4rem) 5rem",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+    gap: "3rem",
+    alignItems: "center",
+  }}>
 
-  {/* RIGHT — images */}
-<div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "row", gap: 20, padding: "2rem 2rem 2rem 0", alignItems: "center" }}>
- <div style={{ position: "relative", overflow: "hidden", borderRadius: 10, width: 306, height: 374, flexShrink: 0 }}>
-    <img src="/hibiscus-hero.jpg" alt="Dried hibiscus flowers" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
-    <div style={{ position: "absolute", inset: 0, background: "rgba(13,43,32,0.3)" }} />
-    <div style={{ position: "absolute", bottom: "0.75rem", left: "0.75rem" }}>
-      <div style={{ fontSize: 9, letterSpacing: "2px", textTransform: "uppercase", color: "#C8A882", marginBottom: "0.2rem" }}>Product</div>
-      <div style={{ fontFamily: "var(--font-serif)", fontSize: 14, fontWeight: 500, color: "#fff" }}>Dried Hibiscus</div>
+    {/* LEFT — text */}
+    <div>
+      <p style={{ fontSize: 11, fontWeight: 500, letterSpacing: "2.5px", textTransform: "uppercase", color: "#C8A882", marginBottom: "1.25rem" }}>West Africa · Botanical exports</p>
+      <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(36px,5vw,68px)", fontWeight: 500, lineHeight: 1.05, color: "#fff", marginBottom: "1.25rem", letterSpacing: "-0.5px" }}>
+        The best hibiscus<br />and ginger grow<br /><em style={{ color: "#C8A882" }}>here.</em>
+      </h1>
+      <p style={{ fontSize: 15, color: "rgba(255,255,255,0.6)", maxWidth: 400, lineHeight: 1.75, marginBottom: "2rem", fontWeight: 300 }}>
+        Zingvera supplies export-grade dried hibiscus flowers and split ginger — sourced directly from Nigeria's northern cooperatives and delivered to manufacturers across Europe and the Americas.
+      </p>
+      <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+        <Link href="/#contact" style={{ fontFamily: "var(--font-sans)", fontSize: 13, fontWeight: 500, background: "#C8A882", color: "#0D2B20", padding: "11px 24px", borderRadius: 4, textDecoration: "none" }}>Request a sample</Link>
+        <Link href="/hibiscus" style={{ fontFamily: "var(--font-sans)", fontSize: 13, fontWeight: 400, background: "transparent", color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.25)", padding: "11px 24px", borderRadius: 4, textDecoration: "none" }}>View products</Link>
+      </div>
     </div>
-    <Link href="/hibiscus" style={{ position: "absolute", inset: 0 }} aria-label="View hibiscus page" />
-  </div>
-  <div style={{ position: "relative", overflow: "hidden", borderRadius: 10, width: 306, height: 374, flexShrink: 0 }}>
-    <img src="/ginger-hero.jpg" alt="Dry split ginger" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
-    <div style={{ position: "absolute", inset: 0, background: "rgba(44,26,14,0.3)" }} />
-    <div style={{ position: "absolute", bottom: "0.75rem", left: "0.75rem" }}>
-      <div style={{ fontSize: 9, letterSpacing: "2px", textTransform: "uppercase", color: "#E8A855", marginBottom: "0.2rem" }}>Product</div>
-      <div style={{ fontFamily: "var(--font-serif)", fontSize: 14, fontWeight: 500, color: "#fff" }}>Dry Split Ginger</div>
+
+    {/* RIGHT — images */}
+    <div style={{ display: "flex", flexDirection: "row", gap: 12, justifyContent: "center" }}>
+      <div style={{ position: "relative", overflow: "hidden", borderRadius: 10, width: 200, height: 260, flexShrink: 0 }}>
+        <img src="/hibiscus-hero.jpg" alt="Dried hibiscus flowers" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(13,43,32,0.3)" }} />
+        <div style={{ position: "absolute", bottom: "0.75rem", left: "0.75rem" }}>
+          <div style={{ fontSize: 9, letterSpacing: "2px", textTransform: "uppercase", color: "#C8A882", marginBottom: "0.2rem" }}>Product</div>
+          <div style={{ fontFamily: "var(--font-serif)", fontSize: 14, fontWeight: 500, color: "#fff" }}>Dried Hibiscus</div>
+        </div>
+        <Link href="/hibiscus" style={{ position: "absolute", inset: 0 }} aria-label="View hibiscus page" />
+      </div>
+      <div style={{ position: "relative", overflow: "hidden", borderRadius: 10, width: 200, height: 260, flexShrink: 0 }}>
+        <img src="/ginger-hero.jpg" alt="Dry split ginger" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(44,26,14,0.3)" }} />
+        <div style={{ position: "absolute", bottom: "0.75rem", left: "0.75rem" }}>
+          <div style={{ fontSize: 9, letterSpacing: "2px", textTransform: "uppercase", color: "#E8A855", marginBottom: "0.2rem" }}>Product</div>
+          <div style={{ fontFamily: "var(--font-serif)", fontSize: 14, fontWeight: 500, color: "#fff" }}>Dry Split Ginger</div>
+        </div>
+        <Link href="/ginger" style={{ position: "absolute", inset: 0 }} aria-label="View ginger page" />
+      </div>
     </div>
-    <Link href="/ginger" style={{ position: "absolute", inset: 0 }} aria-label="View ginger page" />
+
   </div>
-</div>
 </section>
 
       {/* STATS */}
