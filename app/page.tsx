@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
     {/* HERO */}
-<section style={{ minHeight: "100vh", background: "#0D2B20", display: "grid", gridTemplateColumns: "1fr 1fr", position: "relative", overflow: "hidden" }}>
+<section style={{ height: "100vh", maxHeight: 700, background: "#0D2B20", display: "grid", gridTemplateColumns: "1fr 1fr", position: "relative", overflow: "hidden", marginTop: 64 }}>
   <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 80% at 0% 100%, rgba(45,106,79,0.4) 0%, transparent 60%)" }} />
   
   {/* LEFT — text */}
@@ -29,8 +29,8 @@ export default function Home() {
   </div>
 
   {/* RIGHT — images */}
-  <div style={{ position: "relative", zIndex: 1, display: "grid", gridTemplateRows: "1fr 1fr", gap: 3 }}>
-    <div style={{ position: "relative", overflow: "hidden" }}>
+<div style={{ position: "relative", zIndex: 1, display: "grid", gridTemplateRows: "1fr 1fr", gap: 3, padding: "2rem 2rem 2rem 0" }}>
+    <div style={{ position: "relative", overflow: "hidden", borderRadius: 8 }}>
       <img src="/hibiscus-hero.jpg" alt="Dried hibiscus flowers" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
       <div style={{ position: "absolute", inset: 0, background: "rgba(13,43,32,0.25)" }} />
       <div style={{ position: "absolute", bottom: "1.25rem", left: "1.25rem" }}>
@@ -39,7 +39,7 @@ export default function Home() {
       </div>
       <Link href="/hibiscus" style={{ position: "absolute", inset: 0 }} aria-label="View hibiscus page" />
     </div>
-    <div style={{ position: "relative", overflow: "hidden" }}>
+    <div style={{ position: "relative", overflow: "hidden", borderRadius: 8 }}>
       <img src="/ginger-hero.jpg" alt="Dry split ginger" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
       <div style={{ position: "absolute", inset: 0, background: "rgba(44,26,14,0.25)" }} />
       <div style={{ position: "absolute", bottom: "1.25rem", left: "1.25rem" }}>
