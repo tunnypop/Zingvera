@@ -29,8 +29,8 @@ export default function Home() {
   </div>
 
   {/* RIGHT — images */}
-<div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "row", gap: 10, padding: "2rem 2rem 2rem 0", alignItems: "center" }}>
-  <div style={{ position: "relative", overflow: "hidden", borderRadius: 10, width: 180, height: 220, flexShrink: 0 }}>
+<div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "row", gap: 20, padding: "2rem 2rem 2rem 0", alignItems: "center" }}>
+ <div style={{ position: "relative", overflow: "hidden", borderRadius: 10, width: 306, height: 374, flexShrink: 0 }}>
     <img src="/hibiscus-hero.jpg" alt="Dried hibiscus flowers" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
     <div style={{ position: "absolute", inset: 0, background: "rgba(13,43,32,0.3)" }} />
     <div style={{ position: "absolute", bottom: "0.75rem", left: "0.75rem" }}>
@@ -39,7 +39,7 @@ export default function Home() {
     </div>
     <Link href="/hibiscus" style={{ position: "absolute", inset: 0 }} aria-label="View hibiscus page" />
   </div>
-  <div style={{ position: "relative", overflow: "hidden", borderRadius: 10, width: 180, height: 220, flexShrink: 0 }}>
+  <div style={{ position: "relative", overflow: "hidden", borderRadius: 10, width: 306, height: 374, flexShrink: 0 }}>
     <img src="/ginger-hero.jpg" alt="Dry split ginger" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
     <div style={{ position: "absolute", inset: 0, background: "rgba(44,26,14,0.3)" }} />
     <div style={{ position: "absolute", bottom: "0.75rem", left: "0.75rem" }}>
