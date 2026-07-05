@@ -9,23 +9,47 @@ const S = {
 export default function Home() {
   return (
     <>
-      {/* HERO */}
-      <section style={{ minHeight: "100vh", background: "#0D2B20", display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "0 clamp(1.5rem,5vw,4rem)", paddingTop: 0, position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 50% at 80% 30%, rgba(45,106,79,0.35) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 10% 80%, rgba(200,168,130,0.12) 0%, transparent 60%)" }} />
-        <div style={{ position: "relative", zIndex: 1, paddingBottom: "clamp(4rem,8vw,7rem)" }}>
-          <p style={{ fontSize: 11, fontWeight: 500, letterSpacing: "2.5px", textTransform: "uppercase", color: "#C8A882", marginBottom: "1.5rem" }}>West Africa · Botanical exports</p>
-          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(48px,8vw,96px)", fontWeight: 500, lineHeight: 1.0, color: "#fff", maxWidth: 780, marginBottom: "2rem", letterSpacing: "-0.5px" }}>
-            The best hibiscus<br />and ginger grow<br /><em style={{ color: "#C8A882" }}>here.</em>
-          </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.6)", maxWidth: 480, lineHeight: 1.75, marginBottom: "2.5rem", fontWeight: 300 }}>
-            Zingvera supplies export-grade dried hibiscus flowers and split ginger — sourced directly from Nigeria's northern cooperatives and delivered to manufacturers across Europe and the Americas.
-          </p>
-          <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <Link href="/#contact" style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, background: "#C8A882", color: "#0D2B20", padding: "13px 28px", borderRadius: 4, textDecoration: "none" }}>Request a sample</Link>
-            <Link href="/hibiscus" style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 400, background: "transparent", color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.25)", padding: "13px 28px", borderRadius: 4, textDecoration: "none" }}>View products</Link>
-          </div>
-        </div>
-      </section>
+    {/* HERO */}
+<section style={{ minHeight: "100vh", background: "#0D2B20", display: "grid", gridTemplateColumns: "1fr 1fr", position: "relative", overflow: "hidden" }}>
+  <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 80% at 0% 100%, rgba(45,106,79,0.4) 0%, transparent 60%)" }} />
+  
+  {/* LEFT — text */}
+  <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "0 clamp(1.5rem,5vw,4rem) clamp(4rem,8vw,6rem)" }}>
+    <p style={{ fontSize: 11, fontWeight: 500, letterSpacing: "2.5px", textTransform: "uppercase", color: "#C8A882", marginBottom: "1.5rem", paddingTop: "7rem" }}>West Africa · Botanical exports</p>
+    <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(40px,5.5vw,80px)", fontWeight: 500, lineHeight: 1.0, color: "#fff", maxWidth: 580, marginBottom: "2rem", letterSpacing: "-0.5px" }}>
+      The best hibiscus<br />and ginger grow<br /><em style={{ color: "#C8A882" }}>here.</em>
+    </h1>
+    <p style={{ fontSize: 16, color: "rgba(255,255,255,0.6)", maxWidth: 420, lineHeight: 1.75, marginBottom: "2.5rem", fontWeight: 300 }}>
+      Zingvera supplies export-grade dried hibiscus flowers and split ginger — sourced directly from Nigeria's northern cooperatives and delivered to manufacturers across Europe and the Americas.
+    </p>
+    <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: "clamp(4rem,8vw,7rem)" }}>
+      <Link href="/#contact" style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 500, background: "#C8A882", color: "#0D2B20", padding: "13px 28px", borderRadius: 4, textDecoration: "none" }}>Request a sample</Link>
+      <Link href="/hibiscus" style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 400, background: "transparent", color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.25)", padding: "13px 28px", borderRadius: 4, textDecoration: "none" }}>View products</Link>
+    </div>
+  </div>
+
+  {/* RIGHT — images */}
+  <div style={{ position: "relative", zIndex: 1, display: "grid", gridTemplateRows: "1fr 1fr", gap: 3 }}>
+    <div style={{ position: "relative", overflow: "hidden" }}>
+      <img src="/hibiscus-hero.jpg" alt="Dried hibiscus flowers" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
+      <div style={{ position: "absolute", inset: 0, background: "rgba(13,43,32,0.25)" }} />
+      <div style={{ position: "absolute", bottom: "1.25rem", left: "1.25rem" }}>
+        <div style={{ fontSize: 10, letterSpacing: "2px", textTransform: "uppercase", color: "#C8A882", marginBottom: "0.25rem" }}>Product</div>
+        <div style={{ fontFamily: "var(--font-serif)", fontSize: 20, fontWeight: 500, color: "#fff" }}>Dried Hibiscus Flowers</div>
+      </div>
+      <Link href="/hibiscus" style={{ position: "absolute", inset: 0 }} aria-label="View hibiscus page" />
+    </div>
+    <div style={{ position: "relative", overflow: "hidden" }}>
+      <img src="/ginger-hero.jpg" alt="Dry split ginger" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
+      <div style={{ position: "absolute", inset: 0, background: "rgba(44,26,14,0.25)" }} />
+      <div style={{ position: "absolute", bottom: "1.25rem", left: "1.25rem" }}>
+        <div style={{ fontSize: 10, letterSpacing: "2px", textTransform: "uppercase", color: "#E8A855", marginBottom: "0.25rem" }}>Product</div>
+        <div style={{ fontFamily: "var(--font-serif)", fontSize: 20, fontWeight: 500, color: "#fff" }}>Dry Split Ginger</div>
+      </div>
+      <Link href="/ginger" style={{ position: "absolute", inset: 0 }} aria-label="View ginger page" />
+    </div>
+  </div>
+</section>
 
       {/* STATS */}
       <div style={{ background: "#fff", borderBottom: "1px solid #EDE8E1" }}>
