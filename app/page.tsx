@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
    {/* HERO */}
-<section style={{ background: "#0D2B20", display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center", minHeight: 600, maxHeight: 680, height: "calc(100vh - 64px)", marginTop: 64, overflow: "hidden", position: "relative" }}>
+<section style={{ background: "#0D2B20", display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center", height: "100vh", overflow: "hidden", position: "relative" }}>
   <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 80% at 0% 100%, rgba(45,106,79,0.4) 0%, transparent 60%)" }} />
 
   {/* LEFT — text */}
