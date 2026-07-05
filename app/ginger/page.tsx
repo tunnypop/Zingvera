@@ -18,7 +18,7 @@ export default function GingerPage() {
       {/* HERO */}
       <section style={{ padding: "8rem clamp(1.5rem,5vw,4rem) clamp(4rem,8vw,6rem)", position: "relative", overflow: "hidden" }}>
   <div style={{ position: "absolute", inset: 0, backgroundImage: "url('/ginger-hero.jpg')", backgroundSize: "cover", backgroundPosition: "center" }} />
-  <div style={{ position: "absolute", inset: 0, background: "rgba(44,26,14,0.70)" }} />
+  <div style={{ position: "absolute", inset: 0, background: "rgba(44,26,14,0.60)" }} />
         <div style={{ maxWidth: 1160, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <Link href="/" style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", textDecoration: "none", letterSpacing: "1px", textTransform: "uppercase" }}>← Back to home</Link>
           <div style={{ display: "inline-block", fontSize: 10, letterSpacing: "2px", textTransform: "uppercase", background: "rgba(255,255,255,0.1)", color: "#E8A855", padding: "5px 12px", borderRadius: 2, marginTop: "1.5rem", marginBottom: "1.25rem" }}>Zingiber officinale</div>
